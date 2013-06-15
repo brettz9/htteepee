@@ -11,4 +11,14 @@ http.createServer = function createServer () {
     );
 };
 
+http.createMiddlewareServer = function (mws) {
+    'use strict';
+    mws = typeof mws === 'function' ? [mws] : mws;
+    return function () {
+        return _hs.call(http,
+            stack.apply(stack, mws.concat(Array.prototype.slice.call(arguments)))
+        );
+    };
+};
+
 module.exports = http;

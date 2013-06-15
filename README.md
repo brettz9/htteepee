@@ -31,3 +31,23 @@ http.createServer(require('./middleware')('Hello'), function (req, res) {
 
 }).listen(1337, '127.0.0.1');
 ```
+
+Or, if you want to minimize interference with source files even more, you can require your own file containing the baked in middleware:
+
+```javascript
+var http = require('./baked-in-middleware');
+
+http.createServer(function (req, res) {
+
+    res.end('World!');
+
+}).listen(1337, '127.0.0.1');
+```
+
+...and use the `createMiddlewareServer` method inside the required middleware file:
+
+```javascript
+var http = require('htteepee');
+http.createServer = http.createMiddlewareServer(require('./middleware')('Hello '));
+module.exports = http;
+```
