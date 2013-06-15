@@ -17,7 +17,8 @@
         "server",
         "stack",
         "middleware",
-        "layer"
+        "layer",
+        "connect"
     ],
     "bundledDependencies": [
         "stack"
