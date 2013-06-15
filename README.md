@@ -1,7 +1,7 @@
 htteepee
 =======
 
-A teepee you can use to cover your Node HTTP servers!
+A teepee you can use for adding layers over your Node HTTP servers!
 
 Allows you to easily add middleware layers to your Node.js server.
 
