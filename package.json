@@ -1,0 +1,33 @@
+{
+    "name": "htteepee",
+    "version": "0.1.1",
+    "author": {
+        "name": "Brett Zamir",
+        "email": "brettz9@yahoo.com",
+        "url": "brett-zamir.me"
+    },
+    "description": "Allows for adding middleware layers to Node.js servers",
+    "main": "./htteepee",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/brettz9/htteepee.git"
+    },
+    "keywords": [
+        "http",
+        "server",
+        "stack",
+        "middleware",
+        "layer"
+    ],
+    "bundledDependencies": [
+        "stack"
+    ],
+    "license": "MIT",
+    "engine": {
+        "node": ">=0.10"
+    },
+    "readmeFilename": "README.md",
+    "bugs": {
+        "url": "https://github.com/brettz9/htteepee/issues"
+    }
+}
