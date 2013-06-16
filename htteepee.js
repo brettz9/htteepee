@@ -11,9 +11,9 @@ http.createServer = function createServer () {
     );
 };
 
-http.createMiddlewareServer = function (mws) {
+http.createMiddlewareServer = function () {
     'use strict';
-    mws = Array.prototype.slice.call(arguments).reduce(function (arr, arg) {
+    var mws = Array.prototype.slice.call(arguments).reduce(function (arr, arg) {
         return arr.concat(arg); // We only need a single depth, so this is sufficient
     }, []);
     return function createServer () {
