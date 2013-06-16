@@ -13,10 +13,12 @@ http.createServer = function createServer () {
 
 http.createMiddlewareServer = function (mws) {
     'use strict';
-    mws = Array.prototype.slice.call(arguments);
-    return function () {
+    mws = Array.prototype.slice.call(arguments).reduce(function (arr, arg) {
+        return arr.concat(arg); // We only need a single depth, so this is sufficient
+    }, []);
+    return function createServer () {
         return _hs.call(http,
-            stack.apply(stack, mws.concat(Array.prototype.slice.call(arguments)))
+            stack.apply(stack, mws.concat(Array.prototype.slice.call(arguments))) // We really just need to support one argument for createServer()
         );
     };
 };
