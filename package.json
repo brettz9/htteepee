@@ -1,7 +1,7 @@
 {
   "name": "htteepee",
   "description": "Allows for adding middleware layers to Node.js servers",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "./htteepee",
   "author": {
     "name": "Brett Zamir",
