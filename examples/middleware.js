@@ -1,11 +1,10 @@
-/*globals module*/
+'use strict';
 module.exports = function (prefix) {
-    'use strict';
-    return function (req, res, next) {
-        var _end = res.end;
-        res.end = function (data) {
-            _end.call(res, prefix + data);
-        };
-        next();
+  return function (req, res, next) {
+    const _end = res.end;
+    res.end = function (data) {
+      _end.call(res, prefix + data);
     };
+    next();
+  };
 };

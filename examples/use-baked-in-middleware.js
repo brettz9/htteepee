@@ -1,19 +1,15 @@
-/*globals require*/
-
-(function () {
-
 'use strict';
 
-var http = require('./baked-in-middleware');
+const http = require('./baked-in-middleware');
 
 http.createServer(function (req, res) {
 
-    res.end('World!');
+  res.end('World!');
 
 }).listen(1337, '127.0.0.1');
 
+// eslint-disable-next-line no-console
 console.log('Server running at http://127.0.0.1:1337/');
 
-//console.log(http.STATUS_CODES); // Can still use otherwise as regular "http" API
-
-}());
+// Can still use otherwise as regular "http" API
+// console.log(http.STATUS_CODES);

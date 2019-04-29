@@ -1,5 +1,9 @@
-/*globals module, require*/
+'use strict';
 
-var http = require('../htteepee');
-http.createServer = http.createMiddlewareServer(require('./middleware')('Hello '));
+const http = require('../');
+
+http.createServer = http.createMiddlewareServer(require('./middleware')(
+  'Hello '
+));
+
 module.exports = http;
