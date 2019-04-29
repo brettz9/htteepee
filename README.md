@@ -10,7 +10,7 @@ minor simplification in API usage.
 ## Installation
 
 ```shell
-npm install htteepee
+npm i htteepee
 ```
 
 ## Usage
