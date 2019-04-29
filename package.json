@@ -9,6 +9,7 @@
     "url": "http://brett-zamir.me"
   },
   "contributors": [],
+  "browserslist": ["node >= 0.1.14"],
   "scripts": {
     "eslint": "eslint ."
   },
