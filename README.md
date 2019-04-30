@@ -31,15 +31,23 @@ const http = require('htteepee');
 (without need for an extra require and wrapping):
 
 ```js
-http.createServer(require('./middleware')('Hello'), function (req, res) {
+http.createServer(
+  require('./middleware')('Hello '),
+  require('./other-middleware')('there '),
 
-  res.end('World!');
-
-}).listen(1337, '127.0.0.1');
+  function (req, res) {
+    res.end('World!');
+  }
+).listen(1337, '127.0.0.1');
 ```
 
-Or, if you want to minimize interference with source files even more, you
-can require your own file containing the baked in middleware:
+(Our middleware examples are just passing in strings for config, but
+yours could be an object, empty, etc., and while our middleware is
+just prepending a string, yours could do something more sophisticated.)
+
+If you want to minimize modification with the source files you are
+converting to htteepee even more, you can require your own file
+containing the baked in middleware:
 
 ```js
 const http = require('./baked-in-middleware');
@@ -51,25 +59,35 @@ http.createServer(function (req, res) {
 }).listen(1337, '127.0.0.1');
 ```
 
-...and use the `createMiddlewareServer` method inside the required
+...and use either the `createMiddlewareServer` method inside the required
 middleware file:
 
 ```js
 const http = require('htteepee');
 
-http.createServer = http.createMiddlewareServer(require('./middleware')(
-  'Hello '
-));
+http.createServer = http.createMiddlewareServer(
+  require('./middleware')(
+    'Hello '
+  ),
+  require('./other-middleware')(
+    'there '
+  )
+);
 
 module.exports = http;
 ```
 
-or for an even easier API, use `createMiddleware`:
+...or for an even easier API, just use `createMiddleware`:
 
 ```js
-module.exports = require('htteepee').createMiddleware(require('./middleware')(
-  'Hello '
-));
+module.exports = require('htteepee').createMiddleware(
+  require('./middleware')(
+    'Hello '
+  ),
+  require('./other-middleware')(
+    'there '
+  )
+);
 ```
 
 ## API
@@ -111,6 +129,5 @@ Replaces the `htteepee` `createServer` with the result of calling
 
 ## To-dos
 
-1. Demos with multiple middleware
 1. Tests
 1. https

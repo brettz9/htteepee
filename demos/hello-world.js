@@ -2,11 +2,16 @@
 
 const http = require('../');
 
-http.createServer(require('./middleware')('Hello '), function (req, res) {
+http.createServer(
+  require('./middleware')('Hello '),
+  require('./middleware')('there '),
 
-  res.end('World!');
+  function (req, res) {
 
-}).listen(1337, '127.0.0.1');
+    res.end('World!');
+
+  }
+).listen(1337, '127.0.0.1');
 
 // eslint-disable-next-line no-console
 console.log('Server running at http://127.0.0.1:1337/');
