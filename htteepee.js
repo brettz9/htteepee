@@ -13,18 +13,18 @@ http.createServer = function createServer (...args) {
   );
 };
 
-http.createMiddlewareServer = function (...args) {
-  // Todo: Replace with `const mws = args.flat();` after Node 11/12 assumed
-  const mws = args.reduce(function (arr, arg) {
-    // We only need a single depth, so this is sufficient
-    return arr.concat(arg);
-  }, []);
+http.createMiddlewareServer = function (...mws) {
   return function createServer (...serverArgs) {
     return _hs.call(
       http,
       stack(...mws, ...serverArgs)
     ); // We really just need to support one argument for createServer()
   };
+};
+
+http.createMiddleware = function (...mws) {
+  http.createServer = http.createMiddlewareServer(...mws);
+  return http;
 };
 
 module.exports = http;

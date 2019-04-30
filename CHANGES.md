@@ -1,5 +1,12 @@
 # htteepee CHANGES
 
+## 0.5.0
+
+- Breaking change: Stop accepting middleware array arguments (to flatten them)
+  and only expect callbacks
+- Enhancement: Add `createMiddleware` for even easier utility to create a
+  middleware server
+
 ## 0.4.0
 
 - License: Rename file to reflect type (MIT); add lbs
