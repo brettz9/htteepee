@@ -1,5 +1,10 @@
 # htteepee CHANGES
 
+## ?
+
+- Docs/Demos: Provide examples/demos using multiple middleware
+- Rename folder `examples`->`demos`
+
 ## 0.5.0
 
 - Breaking change: Stop accepting middleware array arguments (to flatten them)
