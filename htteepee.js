@@ -14,6 +14,7 @@ http.createServer = function createServer (...args) {
 };
 
 http.createMiddlewareServer = function (...args) {
+  // Todo: Replace with `const mws = args.flat();` after Node 11/12 assumed
   const mws = args.reduce(function (arr, arg) {
     // We only need a single depth, so this is sufficient
     return arr.concat(arg);
