@@ -4,6 +4,8 @@
 
 - Docs/Demos: Provide examples/demos using multiple middleware
 - Rename folder `examples`->`demos`
+- Linting (ESLint): Link Markdown/HTML
+- npm: Update devDeps
 
 ## 0.5.0
 

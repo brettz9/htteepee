@@ -9,9 +9,11 @@
     "url": "http://brett-zamir.me"
   },
   "contributors": [],
-  "browserslist": ["node >= 0.1.14"],
+  "browserslist": [
+    "node >= 0.1.14"
+  ],
   "scripts": {
-    "eslint": "eslint ."
+    "eslint": "eslint --ext=js,md,html ."
   },
   "repository": {
     "type": "git",
@@ -37,20 +39,24 @@
     "stack": "^0.1.0"
   },
   "devDependencies": {
-    "@mysticatea/eslint-plugin": "^10.0.2",
-    "eslint": "^5.16.0",
-    "eslint-config-ash-nazg": "^3.0.1",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-compat": "^3.1.1",
-    "eslint-plugin-eslint-comments": "^3.1.1",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jsdoc": "^4.8.3",
-    "eslint-plugin-markdown": "^1.0.0",
-    "eslint-plugin-no-use-extend-native": "^0.4.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "^8.0.2",
-    "typescript": "^3.4.5"
+    "@mysticatea/eslint-plugin": "^13.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-ash-nazg": "^18.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-array-func": "^3.1.4",
+    "eslint-plugin-compat": "^3.5.1",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsdoc": "^22.1.0",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-no-unsanitized": "^3.1.0",
+    "eslint-plugin-no-use-extend-native": "^0.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-unicorn": "^18.0.1",
+    "typescript": "^3.8.3"
   }
 }
