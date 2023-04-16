@@ -2,7 +2,7 @@
   "name": "htteepee",
   "description": "Allows for adding middleware layers to Node.js servers",
   "version": "0.5.0",
-  "main": "./htteepee",
+  "main": "./htteepee.js",
   "author": {
     "name": "Brett Zamir",
     "email": "brettz9@yahoo.com",
@@ -13,7 +13,8 @@
     "node >= 0.1.14"
   ],
   "scripts": {
-    "eslint": "eslint --ext=js,md,html ."
+    "eslint": "eslint --ext=js,md,html .",
+    "lint": "npm run eslint"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,7 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 6.0.0"
   },
   "homepage": "https://github.com/brettz9/htteepee",
   "bugs": {
@@ -39,24 +40,23 @@
     "stack": "^0.1.0"
   },
   "devDependencies": {
-    "@mysticatea/eslint-plugin": "^13.0.0",
-    "eslint": "^6.8.0",
-    "eslint-config-ash-nazg": "^18.0.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-array-func": "^3.1.4",
-    "eslint-plugin-compat": "^3.5.1",
-    "eslint-plugin-eslint-comments": "^3.1.2",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsdoc": "^22.1.0",
-    "eslint-plugin-markdown": "^1.0.2",
-    "eslint-plugin-no-unsanitized": "^3.1.0",
-    "eslint-plugin-no-use-extend-native": "^0.4.1",
+    "@brettz9/eslint-plugin": "^1.0.4",
+    "eslint": "^8.38.0",
+    "eslint-config-ash-nazg": "^34.10.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-array-func": "^3.1.8",
+    "eslint-plugin-compat": "^4.1.4",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsdoc": "^41.1.1",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-no-unsanitized": "^4.0.2",
+    "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-sonarjs": "^0.5.0",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-unicorn": "^18.0.1",
-    "typescript": "^3.8.3"
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-sonarjs": "^0.19.0",
+    "eslint-plugin-standard": "^4.1.0",
+    "eslint-plugin-unicorn": "^46.0.0"
   }
 }

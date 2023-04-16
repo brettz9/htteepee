@@ -53,9 +53,7 @@ containing the baked in middleware:
 const http = require('./baked-in-middleware');
 
 http.createServer(function (req, res) {
-
   res.end('World!');
-
 }).listen(1337, '127.0.0.1');
 ```
 
