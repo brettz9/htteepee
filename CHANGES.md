@@ -1,11 +1,14 @@
 # htteepee CHANGES
 
-## ?
+## 0.6.0 (unreleased)
 
-- Docs/Demos: Provide examples/demos using multiple middleware
-- Rename folder `examples`->`demos`
-- Linting (ESLint): Link Markdown/HTML
-- npm: Update devDeps
+BREAKING CHANGE:
+Require Node 18+
+
+- docs: provide examples/demos using multiple middleware
+- chore: Rename folder `examples`->`demos`
+- chore: lint Markdown/HTML
+- chore: update devDeps
 
 ## 0.5.0
 

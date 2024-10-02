@@ -2,6 +2,7 @@
 
 const http = require('http');
 
+// eslint-disable-next-line n/no-missing-require -- Bug?
 const stack = require('stack');
 
 const _hs = http.createServer;

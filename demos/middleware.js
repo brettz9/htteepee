@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function (prefix) {
+module.exports = function middleware (prefix) {
   return function (req, res, next) {
     const _end = res.end;
     res.end = function (data) {
