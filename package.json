@@ -41,7 +41,7 @@
     "stack": "^0.1.0"
   },
   "devDependencies": {
-    "eslint": "^9.29.0",
-    "eslint-config-ash-nazg": "^38.0.1"
+    "eslint": "^9.34.0",
+    "eslint-config-ash-nazg": "^39.0.1"
   }
 }
